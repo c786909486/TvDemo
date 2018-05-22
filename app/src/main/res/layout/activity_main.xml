@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fillViewport="true"
+        >
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginLeft="16dp"
+                android:id="@+id/rl_first"
+                android:layout_width="150dp"
+                android:layout_height="0dp"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="#6699ff"
+                android:focusable="true"
+                android:nextFocusDown="@id/rl_second">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@mipmap/ic_launcher"
+                    android:text="历史记录"
+                    android:gravity="center"
+                    android:drawablePadding="8dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_second"
+                android:layout_marginLeft="16dp"
+                android:layout_width="150dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/rl_first"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="#66c9dd"
+                android:focusable="true"
+                android:nextFocusUp="@id/rl_first"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@mipmap/ic_launcher"/>
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>
