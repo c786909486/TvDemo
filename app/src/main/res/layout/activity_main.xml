@@ -5,60 +5,143 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <HorizontalScrollView
+    <!--<HorizontalScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:fillViewport="true"-->
+        <!--&gt;-->
+        <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:id="@+id/cl_parent"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<RelativeLayout-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:id="@+id/rl_first"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:layout_constraintVertical_weight="1"-->
+                <!--app:layout_constraintDimensionRatio="1:1"-->
+                <!--app:layout_constraintTop_toTopOf="parent"-->
+                <!--app:layout_constraintLeft_toLeftOf="parent"-->
+                <!--android:background="#6699ff"-->
+                <!--android:focusable="true"-->
+                <!--android:focusableInTouchMode="true"-->
+                <!--android:nextFocusDown="@id/rl_second">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:drawableTop="@mipmap/ic_launcher"-->
+                    <!--android:text="历史记录"-->
+                    <!--android:gravity="center"-->
+                    <!--android:drawablePadding="8dp"/>-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_second"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/rl_first"-->
+                <!--app:layout_constraintLeft_toLeftOf="parent"-->
+                <!--app:layout_constraintVertical_weight="1"-->
+                <!--app:layout_constraintDimensionRatio="1:1"-->
+                <!--android:background="#66c9dd"-->
+                <!--android:focusable="true"-->
+                <!--android:focusableInTouchMode="true"-->
+                <!--android:nextFocusUp="@id/rl_first"-->
+                <!--&gt;-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:drawableTop="@mipmap/ic_launcher"/>-->
+            <!--</RelativeLayout>-->
+
+        <!--</android.support.constraint.ConstraintLayout>-->
+    <!--</HorizontalScrollView>-->
+
+    <codec.axun.com.tvdemo.widget.SmoothHorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:fillViewport="true"
-        >
-        <android.support.constraint.ConstraintLayout
+        android:layout_height="match_parent">
+        <codec.axun.com.tvdemo.widget.DrawingOrderRelativeLayout
+            android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <RelativeLayout
-                android:layout_marginLeft="16dp"
-                android:id="@+id/rl_first"
-                android:layout_width="150dp"
-                android:layout_height="0dp"
-                app:layout_constraintVertical_weight="1"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:background="#6699ff"
-                android:focusable="true"
-                android:nextFocusDown="@id/rl_second">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="left|center"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:drawableTop="@mipmap/ic_launcher"
-                    android:text="历史记录"
-                    android:gravity="center"
-                    android:drawablePadding="8dp"/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/rl_second"
-                android:layout_marginLeft="16dp"
-                android:layout_width="150dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/rl_first"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintVertical_weight="1"
-                app:layout_constraintDimensionRatio="1:1"
-                android:background="#66c9dd"
+            <codec.axun.com.tvdemo.widget.MetroItemFrameLayout
+                android:id="@+id/fl_1"
+                android:layout_width="208dp"
+                android:layout_height="180dp"
                 android:focusable="true"
-                android:nextFocusUp="@id/rl_first"
+                android:layout_margin="5dp"
+                android:background="@drawable/drawable_bg"
+
                 >
-                <TextView
+
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:drawableTop="@mipmap/ic_launcher"/>
-            </RelativeLayout>
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    />
 
-        </android.support.constraint.ConstraintLayout>
-    </HorizontalScrollView>
+            </codec.axun.com.tvdemo.widget.MetroItemFrameLayout>
+
+            <codec.axun.com.tvdemo.widget.MetroItemFrameLayout
+                android:id="@+id/fl_2"
+                android:layout_width="208dp"
+                android:layout_height="180dp"
+                android:focusable="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/drawable_bg"
+
+                android:layout_below="@id/fl_1"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+            </codec.axun.com.tvdemo.widget.MetroItemFrameLayout>
+
+            <codec.axun.com.tvdemo.widget.MetroItemFrameLayout
+                android:id="@+id/fl_3"
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:background="@drawable/drawable_bg"
+                android:layout_toRightOf="@id/fl_1"
+                android:layout_alignBottom="@id/fl_2"
+                android:layout_alignTop="@id/fl_1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+            </codec.axun.com.tvdemo.widget.MetroItemFrameLayout>
+
+
+        </codec.axun.com.tvdemo.widget.DrawingOrderRelativeLayout>
+    </codec.axun.com.tvdemo.widget.SmoothHorizontalScrollView>
 
 </RelativeLayout>
