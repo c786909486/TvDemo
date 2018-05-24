@@ -5,69 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<HorizontalScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:fillViewport="true"-->
-        <!--&gt;-->
-        <!--<android.support.constraint.ConstraintLayout-->
-            <!--android:id="@+id/cl_parent"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-            <!--<RelativeLayout-->
-                <!--android:layout_marginLeft="16dp"-->
-                <!--android:id="@+id/rl_first"-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="0dp"-->
-                <!--app:layout_constraintVertical_weight="1"-->
-                <!--app:layout_constraintDimensionRatio="1:1"-->
-                <!--app:layout_constraintTop_toTopOf="parent"-->
-                <!--app:layout_constraintLeft_toLeftOf="parent"-->
-                <!--android:background="#6699ff"-->
-                <!--android:focusable="true"-->
-                <!--android:focusableInTouchMode="true"-->
-                <!--android:nextFocusDown="@id/rl_second">-->
 
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_centerInParent="true"-->
-                    <!--android:drawableTop="@mipmap/ic_launcher"-->
-                    <!--android:text="历史记录"-->
-                    <!--android:gravity="center"-->
-                    <!--android:drawablePadding="8dp"/>-->
-            <!--</RelativeLayout>-->
-
-            <!--<RelativeLayout-->
-                <!--android:id="@+id/rl_second"-->
-                <!--android:layout_marginLeft="16dp"-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="0dp"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--app:layout_constraintTop_toBottomOf="@+id/rl_first"-->
-                <!--app:layout_constraintLeft_toLeftOf="parent"-->
-                <!--app:layout_constraintVertical_weight="1"-->
-                <!--app:layout_constraintDimensionRatio="1:1"-->
-                <!--android:background="#66c9dd"-->
-                <!--android:focusable="true"-->
-                <!--android:focusableInTouchMode="true"-->
-                <!--android:nextFocusUp="@id/rl_first"-->
-                <!--&gt;-->
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_centerInParent="true"-->
-                    <!--android:drawableTop="@mipmap/ic_launcher"/>-->
-            <!--</RelativeLayout>-->
-
-        <!--</android.support.constraint.ConstraintLayout>-->
-    <!--</HorizontalScrollView>-->
-
-    <codec.axun.com.tvdemo.widget.SmoothHorizontalScrollView
+    <org.evilbinary.tv.widget.TvHorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <codec.axun.com.tvdemo.widget.DrawingOrderRelativeLayout
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -78,70 +21,192 @@
             android:paddingEnd="40dp"
             android:paddingStart="40dp">
 
-            <codec.axun.com.tvdemo.widget.MetroItemFrameLayout
+            <org.evilbinary.tv.widget.RoundedFrameLayout
                 android:id="@+id/fl_1"
                 android:layout_width="208dp"
                 android:layout_height="180dp"
                 android:focusable="true"
                 android:layout_margin="5dp"
-                android:background="@drawable/drawable_bg"
-
+                app:radius="8dp"
                 >
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:src="@mipmap/ic_launcher"
+                    android:background="@drawable/drawable_bg"
                     />
 
-            </codec.axun.com.tvdemo.widget.MetroItemFrameLayout>
+            </org.evilbinary.tv.widget.RoundedFrameLayout>
 
-            <codec.axun.com.tvdemo.widget.MetroItemFrameLayout
+            <org.evilbinary.tv.widget.RoundedFrameLayout
                 android:id="@+id/fl_2"
                 android:layout_width="208dp"
                 android:layout_height="180dp"
                 android:focusable="true"
                 android:layout_margin="5dp"
-                android:background="@drawable/drawable_bg"
-
                 android:layout_below="@id/fl_1"
+                app:radius="8dp"
                 >
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:src="@mipmap/ic_launcher"
+                    android:background="@drawable/drawable_bg"
                     />
 
-            </codec.axun.com.tvdemo.widget.MetroItemFrameLayout>
+            </org.evilbinary.tv.widget.RoundedFrameLayout>
 
-            <codec.axun.com.tvdemo.widget.MetroItemFrameLayout
+            <org.evilbinary.tv.widget.RoundedFrameLayout
                 android:id="@+id/fl_3"
                 android:layout_width="208dp"
                 android:layout_height="match_parent"
                 android:focusable="true"
-                android:background="@drawable/drawable_bg"
                 android:layout_toRightOf="@id/fl_1"
                 android:layout_alignBottom="@id/fl_2"
                 android:layout_alignTop="@id/fl_1"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-
+                app:radius="8dp"
                 >
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:src="@mipmap/ic_launcher"
+                    android:background="@drawable/drawable_bg"
                     />
 
-            </codec.axun.com.tvdemo.widget.MetroItemFrameLayout>
+            </org.evilbinary.tv.widget.RoundedFrameLayout>
 
+            <org.evilbinary.tv.widget.RoundedFrameLayout
+                android:id="@+id/fl_4"
+                android:layout_width="208dp"
+                android:layout_height="180dp"
+                android:focusable="true"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/fl_3"
+                app:radius="8dp"
+                >
 
-        </codec.axun.com.tvdemo.widget.DrawingOrderRelativeLayout>
-    </codec.axun.com.tvdemo.widget.SmoothHorizontalScrollView>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    android:background="@drawable/drawable_bg"
+                    />
+
+            </org.evilbinary.tv.widget.RoundedFrameLayout>
+
+            <org.evilbinary.tv.widget.RoundedFrameLayout
+                android:id="@+id/fl_5"
+                android:layout_width="208dp"
+                android:layout_height="180dp"
+                android:focusable="true"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/fl_3"
+                android:layout_below="@id/fl_4"
+                app:radius="8dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    android:background="@drawable/drawable_bg"
+                    />
+
+            </org.evilbinary.tv.widget.RoundedFrameLayout>
+
+            <org.evilbinary.tv.widget.RoundedFrameLayout
+                android:id="@+id/fl_6"
+                android:layout_width="208dp"
+                android:layout_height="116.5dp"
+                android:focusable="true"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/fl_5"
+                app:radius="8dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    android:background="@drawable/drawable_bg"
+                    />
+
+            </org.evilbinary.tv.widget.RoundedFrameLayout>
+
+            <org.evilbinary.tv.widget.RoundedFrameLayout
+                android:id="@+id/fl_7"
+                android:layout_width="208dp"
+                android:layout_height="116.5dp"
+                android:focusable="true"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/fl_5"
+                android:layout_below="@id/fl_6"
+                app:radius="8dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    android:background="@drawable/drawable_bg"
+                    />
+
+            </org.evilbinary.tv.widget.RoundedFrameLayout>
+
+            <org.evilbinary.tv.widget.RoundedFrameLayout
+                android:id="@+id/fl_8"
+                android:layout_width="208dp"
+                android:layout_height="116.5dp"
+                android:focusable="true"
+                android:layout_margin="5dp"
+                app:radius="8dp"
+                android:layout_toRightOf="@id/fl_5"
+                android:layout_below="@id/fl_7"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    android:background="@drawable/drawable_bg"
+                    />
+
+            </org.evilbinary.tv.widget.RoundedFrameLayout>
+
+            <org.evilbinary.tv.widget.RoundedFrameLayout
+                android:id="@+id/fl_9"
+                android:layout_width="208dp"
+                android:layout_height="116.5dp"
+                android:focusable="true"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/fl_6"
+                app:radius="8dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    android:background="@drawable/drawable_bg"
+                    />
+
+            </org.evilbinary.tv.widget.RoundedFrameLayout>
+
+        </RelativeLayout>
+    </org.evilbinary.tv.widget.TvHorizontalScrollView>
 
 </RelativeLayout>
